@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">
+        Agregar Producto
+    </div>
+    <div class="card-body">
+        <form (ngSubmit)="guardar()" autocomplete="off" [formGroup]="miFormulario">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre del Producto:</label>
+                <input type="text"
+                formControlName="nombre"
+                class="form-control" placeholder="Escribe el producto">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Categoria</label>
+                <select class="form-control" formControlName="categoria">
+                    <option value="">Selecciona una categoria</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Musica">Musica</option>
+                  </select>
+            </div>
+            <mat-card-actions fxLayoutGap="20px">
+                <button type="submit" mat-raised-button color="primary" (click)="guardar()">Agregar</button>
+                <button type="button" mat-raised-button color="warn">Cancelar</button>
+            </mat-card-actions>
+        </form>
+    </div>
+</div>

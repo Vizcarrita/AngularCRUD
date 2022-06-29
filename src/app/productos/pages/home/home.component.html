@@ -1,0 +1,49 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav>
+        <mat-toolbar color="">
+            <span>Menu</span>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar>
+        <mat-nav-list>
+            <a routerLink="./productos/listado" mat-list-item>
+                <mat-icon mat-list-icon>article</mat-icon>
+                <span> Lista de Productos</span>
+            </a>
+
+        </mat-nav-list>
+        <mat-nav-list>
+            <a routerLink="./productos/agregar" mat-list-item>
+                <mat-icon mat-list-icon>add</mat-icon>
+                <span> Agregar Producto</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>CRUD-APP</span>
+        <span class="spacer"></span>
+        <a routerLink="./auth/login">
+            <button mat-button>
+                Ingresar
+            </button>
+        </a>
+        <a routerLink="./auth/registro">
+            <button mat-button>
+                Registrate
+            </button>
+        </a>
+    </mat-toolbar>
+    <div id="main">
+        
+        <div class="fof">
+            <h1>Bienvenido al Home Page</h1>
+            
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</mat-sidenav-container>
